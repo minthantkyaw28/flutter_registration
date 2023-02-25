@@ -145,8 +145,9 @@ class _loginState extends State<login> {
   //DataValidate
 
   void userDataValidate() async {
-    String? email = await sharedPreferencesManager.getData(key: "email");
-    String? password = await sharedPreferencesManager.getData(key: "password");
+    String? email = await sharedPreferencesManager.getEmail(key: "email");
+    String? password =
+        await sharedPreferencesManager.getPassword(key: "password");
 
     // print(email);
     // print(password);

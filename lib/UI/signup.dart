@@ -209,7 +209,16 @@ class _signupState extends State<signup> {
   //Registration
 
   void registerUser() async {
-    if (_passwordController.text == _passwordConController.text) {
+    if (_nameController == '' ||
+        _emailController == '' ||
+        _passwordController == '' ||
+        _passwordController == '') {
+      Fluttertoast.showToast(
+        msg: "Fill all the form fields",
+        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        toastLength: Toast.LENGTH_LONG,
+      );
+    } else if (_passwordController.text == _passwordConController.text) {
       sharedPreferencesManager.saveName(
           key: 'name', value: _nameController.text);
       sharedPreferencesManager.saveEmail(

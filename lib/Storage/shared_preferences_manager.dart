@@ -31,7 +31,14 @@ class SharedPreferencesManager {
   }
 
   //getData
-  Future<String?> getData({required String key}) async {
+  Future<String?> getEmail({required String key}) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    String? result = prefs.getString(key);
+    return result;
+  }
+
+  Future<String?> getPassword({required String key}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     String? result = prefs.getString(key);
