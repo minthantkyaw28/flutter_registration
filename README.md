@@ -1,6 +1,6 @@
 # ui_prj_1
 
-A new Flutter project.
+A Flutter Registration system with shared preferences local storage in Netflix UI theme.
 
 ## Getting Started
 
